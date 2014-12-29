@@ -54,6 +54,7 @@
     }
     
     cell.textLabel.text=[sectionNames objectAtIndex:indexPath.row];
+    cell.textLabel.textColor=[UIColor whiteColor];
     cell.textLabel.font=[UIFont systemFontOfSize:16];
     
     return cell;

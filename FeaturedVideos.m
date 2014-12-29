@@ -440,12 +440,19 @@ int videoIndex;
                     
                 }else{
                     
+                    [HUD dismissAnimated:YES];
+                    UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Sorry." message:@"We were not able to get video file. We apologize for the issue." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                    [alert show];
+                    
                 }
                 
     
             } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
                 
+                
                 [HUD dismissAnimated:YES];
+                UIAlertView * alert = [[UIAlertView alloc] initWithTitle:@"Sorry." message:@"We were not able to get video file. We apologize for the issue." delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+                [alert show];
                 
                 
             }];
